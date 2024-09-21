@@ -1,5 +1,5 @@
 /*
-* check Mongodb connection
+* check Mongodb connection using VSC connection string
 * command: node mongodb_connection.js
 */
 
