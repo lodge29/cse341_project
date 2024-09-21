@@ -1,6 +1,12 @@
+/*
+* check Mongodb connection
+* command: node mongodb_connection.js
+*/
+
 const { MongoClient, ServerApiVersion } = require('mongodb');
 
-const uri = "mongodb+srv://Domik29:Jk27ha80@cluster0.y6uas.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+// Mongodb connection string
+const uri = require('./.env.MONGODB_URL_VSC');
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {

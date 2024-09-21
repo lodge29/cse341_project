@@ -2,25 +2,27 @@
 const express = require('express');
 const app = express();
 
-// original code below  --- bulky
-/* 
-const lesson1Controller = require('./controllers/lesson1');
+// mongodb
+const mongodb = require('./data/database');
 
-app.get('/', lesson1Controller.dustinRoute);
-app.get('/lodge', lesson1Controller.lodgeRoute);
+// port
+const port = process.env.PORT || 3000;
 
-app.get('/', (req, res) => {
-  res.send("dustin");
-});
- 
-app.get('/lodge', (req, res) => {
-    res.send("lodge");
-  });
-*/
-const port = 3000;
-
+// routing
 app.use('/', require('./routes'));
 
-app.listen(process.env.PORT || port, () => {
-  console.log('Web Server is listening at port ' + (process.env.PORT || 3000));
+// err if Mongodb doesn't listen
+mongodb.initDb((err) => {
+  if(err) {
+    console.log(err);
+  }
+  else {
+    app.listen(port, () => {console.log('DATABASE MONGO is listening and NODE running on PORT ' + port)});
+  }
 });
+
+/*
+app.listen(process.env.PORT || port, () => {
+  console.log('Web Server running on port: ' + port);
+});
+*/
