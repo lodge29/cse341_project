@@ -3,10 +3,13 @@
 * command: node mongodb_connection.js
 */
 
+const dotenv = require('dotenv');
+dotenv.config();
+
 const { MongoClient, ServerApiVersion } = require('mongodb');
 
 // Mongodb connection string
-const uri = require('./.env.MONGODB_URL_VSC');
+const uri = process.env.MONGODB_URL;
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {

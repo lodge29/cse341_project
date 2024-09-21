@@ -3,11 +3,14 @@
 * command: node mongodb_lists.js
 */
 
+const dotenv = require('dotenv');
+dotenv.config();
+
 const { MongoClient } = require('mongodb');
 
 async function main(){
 
-    const uri = require('./.env.MONGODB_URL_VSC');
+    const uri = process.env.MONGODB_URL_VSC;
 
     const client = new MongoClient(uri);
  
