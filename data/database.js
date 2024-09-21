@@ -1,3 +1,8 @@
+/*
+* week 1 lesson 1.2
+* mongodb initialization, then exports
+*/
+
 const dotenv = require('dotenv');
 dotenv.config();
 

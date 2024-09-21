@@ -1,12 +1,16 @@
-const { BSON } = require('mongodb');
+/*
+* week 1 lesson 1.2
+* GET ALL or SINGLE mongodb collections: project_week1, then exports
+*/
+
 const mongodb = require('../data/database');
 //const ObjectId = require('mongodb').ObjectId;
 
-// updated method?
+// updated method for ObjectId?
 const { ObjectId } = require('mongodb');
 
 
-// Get all data from collection:'users'
+// Get ALL data from mongodb collections: project_week1.users
 const getAll = async (req, res) => {
     const result = await mongodb.getDatabase().db().collection('users').find();
     result.toArray().then((users) => {
@@ -15,7 +19,7 @@ const getAll = async (req, res) => {
     });
 };
 
-// Get single collections of data
+// Get SINGLE collections: project_week1.users[]
 // ObjectId is crossed out as 'deprecated' but still works...? whats the new method?
 const getSingle = async (req, res) => {
     const userId = new ObjectId(req.params.id);

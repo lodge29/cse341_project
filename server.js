@@ -8,7 +8,7 @@ const mongodb = require('./data/database');
 // port
 const port = process.env.PORT || 3000;
 
-// routing
+// routing to ./routes folder
 app.use('/', require('./routes'));
 
 // err if Mongodb doesn't listen

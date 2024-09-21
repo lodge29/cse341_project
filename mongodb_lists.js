@@ -1,4 +1,6 @@
 /*
+* week 1 lesson 1.1
+* first attempt - different from lesson 1.2
 * retrieve MongoDB database lists
 * command: node mongodb_lists.js
 */

@@ -1,14 +1,17 @@
 /*
+* week 1 lesson 1.1
+* first attempt - different from lesson 1.2
 * check Mongodb connection using VSC connection string
 * command: node mongodb_connection.js
 */
 
+// to use 'process.env.ENV_VAR'
 const dotenv = require('dotenv');
 dotenv.config();
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
 
-// Mongodb connection string
+// checks .env file for connection strings
 const uri = process.env.MONGODB_URL;
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version

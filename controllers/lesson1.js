@@ -1,6 +1,6 @@
 /*
 * Week 1 Lesson 1.1
-* basic req/res using strings, then export
+* basic req/res using strings, then exports
 * 
 */
 
