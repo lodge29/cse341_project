@@ -11,7 +11,7 @@ const getAll = async (req, res) => {
 };
 
 
-
+// Get single collections of data
 const getSingle = async (req, res) => {
     // ObjectId.createFromHexString more effective/newer
     const userId = new ObjectId.createFromHexString(req.params.id);
