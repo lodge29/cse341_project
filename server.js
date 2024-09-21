@@ -22,6 +22,7 @@ mongodb.initDb((err) => {
 });
 
 /*
+// week 1 Lessson 1.1
 app.listen(process.env.PORT || port, () => {
   console.log('Web Server running on port: ' + port);
 });

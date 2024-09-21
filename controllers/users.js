@@ -10,9 +10,11 @@ const getAll = async (req, res) => {
     });
 };
 
-// ObjectId showing crossed out as 'deprecated' - why??? - still works though...
+
+
 const getSingle = async (req, res) => {
-    const userId = new ObjectId(req.params.id);
+    // ObjectId.createFromHexString more effective/newer
+    const userId = new ObjectId.createFromHexString(req.params.id);
     const result = await mongodb.getDatabase().db().collection('users').find({ _id: userId });
     result.toArray().then((users) => {
         res.setHeader('Content-Type', 'application/json');
