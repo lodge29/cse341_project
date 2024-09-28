@@ -5,7 +5,7 @@
     "description": "Users API",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "cse341-project-hw67.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
@@ -13,7 +13,7 @@
   "paths": {
     "/": {
       "get": {
-        "description": "week 1 get first name",
+        "description": "week 1: get first name",
         "responses": {
           "200": {
             "description": "OK"
@@ -23,7 +23,7 @@
     },
     "/lodge": {
       "get": {
-        "description": "week 1 get last name using '/lodge",
+        "description": "week 1: get last name using '/lodge",
         "responses": {
           "200": {
             "description": "OK"
@@ -33,7 +33,7 @@
     },
     "/users/": {
       "get": {
-        "description": "week 2 get all users",
+        "description": "week 2: get all users",
         "produces": [
           "application/json"
         ],
@@ -44,7 +44,7 @@
         }
       },
       "post": {
-        "description": "week 2 create new user",
+        "description": "week 2: create new user",
         "parameters": [
           {
             "name": "body",
@@ -71,7 +71,7 @@
     },
     "/users/{id}": {
       "get": {
-        "description": "week 2 get single user with _id",
+        "description": "week 2: get single user with _id",
         "produces": [
           "application/json"
         ],
@@ -90,7 +90,7 @@
         }
       },
       "put": {
-        "description": "week 2 modify existing user",
+        "description": "week 2: modify existing user",
         "parameters": [
           {
             "name": "id",
@@ -121,7 +121,7 @@
         }
       },
       "delete": {
-        "description": "week 2 delete user by _id",
+        "description": "week 2: delete user by _id",
         "parameters": [
           {
             "name": "id",
