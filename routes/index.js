@@ -3,7 +3,7 @@ const router = require('express').Router();
 
 
 // Week 1 - lesson 1.1
-// gets ./controllers file
+// gets ./controllers/lessos1 file
 const lesson1Controller = require('../controllers/lesson1');
 
 // week 1 lesson 1.1

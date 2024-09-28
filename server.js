@@ -1,12 +1,15 @@
 // express web server
 const express = require('express');
+const bodyParser = require('body-parser');
+const mongodb = require('./data/database');
 const app = express();
 
-// mongodb
-const mongodb = require('./data/database');
 
 // port
 const port = process.env.PORT || 3000;
+
+// week 2
+app.use(bodyParser.json());
 
 // routing to ./routes folder
 app.use('/', require('./routes'));
