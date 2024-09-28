@@ -70,6 +70,7 @@ const deleteUser = async (req, res) => {
 
 // EXPORT for use
 module.exports = {
+    // week 1
     getAll,
     getSingle,
     // week 2

@@ -1,6 +1,7 @@
-// router variables
 const router = require('express').Router();
 
+// week 2 swagger file
+router.use('/', require('./swagger'));
 
 // Week 1 - lesson 1.1
 // gets ./controllers/lessos1 file
