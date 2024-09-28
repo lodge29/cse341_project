@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-// week 2 swagger file
+// week 2 swagger route
 router.use('/', require('./swagger'));
 
 // Week 1 - lesson 1.1

@@ -6,7 +6,7 @@ const app = express();
 
 
 // get port number from .env file
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 
 // week 2
 app.use(bodyParser.json());
