@@ -6,7 +6,7 @@ const router = express.Router();
 const usersController = require('../controllers/users');
 
 // week 1 lesson 1.2
-// GETs .functions from ./controller
+// GET
 router.get('/', usersController.getAll);
 router.get('/:id', usersController.getSingle);
 

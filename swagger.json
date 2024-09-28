@@ -13,7 +13,7 @@
   "paths": {
     "/": {
       "get": {
-        "description": "week 1: get first name",
+        "description": "",
         "responses": {
           "200": {
             "description": "OK"
@@ -23,7 +23,7 @@
     },
     "/lodge": {
       "get": {
-        "description": "week 1: get last name using '/lodge",
+        "description": "",
         "responses": {
           "200": {
             "description": "OK"
@@ -31,9 +31,19 @@
         }
       }
     },
+    "/api-docs": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
     "/users/": {
       "get": {
-        "description": "week 2: get all users",
+        "description": "",
         "produces": [
           "application/json"
         ],
@@ -44,7 +54,7 @@
         }
       },
       "post": {
-        "description": "week 2: create new user",
+        "description": "",
         "parameters": [
           {
             "name": "body",
@@ -52,10 +62,19 @@
             "schema": {
               "type": "object",
               "properties": {
-                "name": {
+                "firstName": {
                   "example": "any"
                 },
-                "age": {
+                "lastName": {
+                  "example": "any"
+                },
+                "email": {
+                  "example": "any"
+                },
+                "favoriteColor": {
+                  "example": "any"
+                },
+                "birthday": {
                   "example": "any"
                 }
               }
@@ -71,7 +90,7 @@
     },
     "/users/{id}": {
       "get": {
-        "description": "week 2: get single user with _id",
+        "description": "",
         "produces": [
           "application/json"
         ],
@@ -90,7 +109,7 @@
         }
       },
       "put": {
-        "description": "week 2: modify existing user",
+        "description": "",
         "parameters": [
           {
             "name": "id",
@@ -104,10 +123,19 @@
             "schema": {
               "type": "object",
               "properties": {
-                "name": {
+                "firstName": {
                   "example": "any"
                 },
-                "age": {
+                "lastName": {
+                  "example": "any"
+                },
+                "email": {
+                  "example": "any"
+                },
+                "favoriteColor": {
+                  "example": "any"
+                },
+                "birthday": {
                   "example": "any"
                 }
               }
@@ -121,7 +149,7 @@
         }
       },
       "delete": {
-        "description": "week 2: delete user by _id",
+        "description": "",
         "parameters": [
           {
             "name": "id",
@@ -139,7 +167,6 @@
     }
   },
   "schemas": [
-    "http",
-    "https"
+    "http"
   ]
 }
