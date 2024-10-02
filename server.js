@@ -5,6 +5,8 @@ const mongodb = require('./data/database');
 const app = express();
 
 
+
+
 // get port number from .env file
 const port = process.env.PORT || 3000;
 
@@ -22,6 +24,13 @@ next();
 
 // routing to ./routes folder
 app.use('/', require('./routes'));
+
+// per video
+
+process.on('uncaughtException', (err, origin) => {
+  console.log(process.stderr.fd, 'Caught exception: ${err}\n' + 'Exception onrigin: ${origin}');
+})
+
 
 // err if Mongodb doesn't listen
 mongodb.initDb((err) => {

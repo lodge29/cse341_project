@@ -4,6 +4,12 @@ const mongodb = require('../data/database');
 // updated method for ObjectId?
 const { ObjectId } = require('mongodb');
 
+/*
+// validator function isValid
+if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Invalid. Enter valid contact id.')
+}
+    */
 
 // Get ALL data from mongodb collections: project_week1.users
 const getAll = async (req, res) => {
@@ -40,7 +46,7 @@ const createUser = async (req, res) => {
     if (response.acknowledged) {
         res.status(204).send();
     } else {
-        res.statuse(500).json(response.error || 'Some error ovvured while updating the user');
+        res.statuse(500).json(response.error || 'Some error occured while updating the user');
     }
 };
 
@@ -56,7 +62,7 @@ const updateUser = async (req, res) => {
         birthday:req.body.birthday
     };
     const response = await mongodb.getDatabase().db().collection('users').replaceOne({_id: userId}, user);
-    if (response.modifiedCount) {
+    if (response.modifiedCount > 0) {
         res.status(204).send();
     } else {
         res.statuse(500).json(response.error || 'Some error ovvured while updating the user');
